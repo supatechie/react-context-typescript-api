@@ -9,10 +9,11 @@ function App() {
   const [loading, setLoading] = useState(true)
   const {userState:{users},userDispatch} = useUserContext()
   useEffect(() => {
-    console.log(users)
     const fetchData = async() =>{
       if(users.length === 0 ){
         await getUsers(userDispatch)
+        setLoading(false)
+        return 
       }
       setLoading(false)
     }
@@ -29,6 +30,9 @@ function App() {
         <h4>React Context Api using Typescript & Json placeholder</h4>
       </div>
       { loading ? <div className="loading-spinner" /> : <Users/> }
+      <footer>
+        This project is designed & developed with &#10084; by <a href="https://github.com/supatechie">Peter Kelvin Torver</a>
+      </footer>
     </div>
   );
 }

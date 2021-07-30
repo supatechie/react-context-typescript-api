@@ -9,7 +9,6 @@ const Users = () =>{
     const {userState:{users,totalUsers}} = useUserContext()
     const [searchData, setSearchData] = useState<IUserState['users']>([])
     const [query, setQuery] = useState("")
-    console.log(totalUsers,users)
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>{
         const query = e.target.value
         setQuery(query.toLowerCase())
@@ -17,7 +16,7 @@ const Users = () =>{
             setSearchData([])
         }
         else{
-            const filterSet = users.filter(u => u.name.toLowerCase().includes(query) || u.email.toLowerCase().includes(query))
+            const filterSet = users.filter(u => u.name.toLowerCase().includes(query) || u.email.toLowerCase().includes(query) || u.username.toLowerCase().includes(query))
             setSearchData(filterSet)
         }
     }

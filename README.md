@@ -44,3 +44,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## What You Need To Know
+
+This is project is designed using react typescript boilerplate with the proper implementation of react context api & and fetching data from api service using typescript. You can fine tune this code to suite your desire. The folder structure is simple to understand and i have tried my best to keep everything simple. Unit & integration tests have been implemented using react testing library. 
+
+This mini project fetches data from an api [Json Placeholder](https://jsonplaceholder.typicode.com). and siplay in the webpage. Instead of keep the state management locally, i decided to globalize it using the react context api which makes it simpler. Within this project you can be able to search a user by ***username*** or ***email*** address. Happy reviewing!.
+
+## Want To See This Project In Action?
+
+This is project is hosted live on heroku. *A demo is worth a thousand words*. Visit [Demo](https://react-context-api-typescript.herokuapp.com/)
