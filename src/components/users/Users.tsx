@@ -21,8 +21,8 @@ const Users = () =>{
     // eslint-disable-next-line
     }, [])
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        const query = e.target.value
-        setQuery(query.toLowerCase())
+        const query = e.target.value.toLowerCase()
+        setQuery(query)
         if(query === ""){
             setSearchData([])
         }
