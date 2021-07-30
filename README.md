@@ -47,9 +47,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## What You Need To Know
 
-This is project is designed using react typescript boilerplate with the proper implementation of react context api & and fetching data from api service using typescript. You can fine tune this code to suite your desire. The folder structure is simple to understand and i have tried my best to keep everything simple. Unit & integration tests have been implemented using react testing library. 
+This project is designed using react typescript boilerplate with the proper implementation of react context api & and fetching data from api service(json placeholder) using typescript. You can fine-tune this code to suit your desire. The folder structure is simple to understand and i have tried my best to keep everything simple. Unit & integration tests have been implemented using react testing library. 
 
-This mini project fetches data from an api [Json Placeholder](https://jsonplaceholder.typicode.com). and siplay in the webpage. Instead of keep the state management locally, i decided to globalize it using the react context api which makes it simpler. Within this project you can be able to search a user by ***username*** or ***email*** address. Happy reviewing!.
+This mini project fetches data from an api [Json Placeholder](https://jsonplaceholder.typicode.com). and display in the webpage. Instead of keeping the state management locally, i decided to globalize it using the react context api which makes it simpler. Within this project you can be able to search a user by ***username*** or ***email*** or ***name*** address. Happy reviewing!.
 
 ## Want To See This Project In Action?
 
