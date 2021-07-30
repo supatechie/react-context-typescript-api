@@ -12,6 +12,7 @@ export const getUsers = async(dispatch: UserDispatchAction): Promise<IResponse> 
         dispatch({type: UserActions.GET_USERS,payload: data})
         return {data, error: false, message: "Users fetched success" }
     } catch (error) {
+        dispatch({type: UserActions.ERROR,payload: {}})
         return {data: [], error: true, message: "Users fetched success" }
     }
 }

@@ -16,7 +16,8 @@ export interface IUser {
 
 export interface IUserState{
     users: IUser[],
-    totalUsers: number
+    totalUsers: number,
+    loading: boolean
 }
 
 export interface IResponse {

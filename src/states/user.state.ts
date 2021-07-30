@@ -2,5 +2,6 @@ import { IUserState } from "../interfaces/user.interface";
 
 export const userInitialState: IUserState = {
     users: [],
-    totalUsers: 0
+    totalUsers: 0,
+    loading: true
 }

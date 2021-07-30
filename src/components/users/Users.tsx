@@ -1,14 +1,25 @@
-import React, { useState } from "react"
+import React, {useEffect, useState } from "react"
 import { Card, CardBody, CardHeader } from "reactstrap"
 import { useUserContext } from "../../context/UserContext"
+import { getUsers } from "../../functions/user.functions"
 import { IUserState } from "../../interfaces/user.interface"
 import SearchBar from "../search/SearchBar"
 import UserList from "../userList/UserList"
 
 const Users = () =>{
-    const {userState:{users,totalUsers}} = useUserContext()
+    const {userState:{users,totalUsers,loading},userDispatch} = useUserContext()
     const [searchData, setSearchData] = useState<IUserState['users']>([])
     const [query, setQuery] = useState("")
+    useEffect(() => {
+        const fetchData = async() =>{
+          if(users.length === 0 ){
+            await getUsers(userDispatch)
+          }
+        }
+        fetchData()
+        return () => {}
+    // eslint-disable-next-line
+    }, [])
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>{
         const query = e.target.value
         setQuery(query.toLowerCase())
@@ -21,11 +32,17 @@ const Users = () =>{
         }
     }
     /**
+     * show loading spinner
+     */
+    if(loading){
+        return <div title="users" className="container mt-5"><div className="loading-spinner" /></div>
+    }
+    /**
      * Show error if no user found
      */
     if(totalUsers === 0){
         return (
-            <div className="container">
+            <div title="users" className="container mt-5">
                 <h2 className="text-danger h2 mt-5">Oops, it seems you are offline, please reload this page again!</h2>
             </div>
         )
@@ -34,7 +51,7 @@ const Users = () =>{
      * Display users
      */
     return (
-            <div className="container">
+            <div title="users" className="container">
                 <Card>
                     <CardHeader>
                         <h4 className="user-title">

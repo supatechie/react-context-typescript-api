@@ -29,6 +29,8 @@ body{
   border-radius: 2px;
   position: relative;
   margin-top: -150px;
+  margin-bottom: 200px;
+  min-height: 300px;
 }
 .card {
   box-shadow: 3px 4px 5px rgba(0,0,0,0.2);
@@ -53,10 +55,13 @@ body{
 }
 footer{
   text-align: center;
-  margin-top: 20px;
+  margin-top: -200px;
   margin-bottom: 30px;
   padding: 10px;
   font-size: 30px;
+  position: relative;
+  bottom: 10px;
+  height: 60px;
 }
 .loading-spinner{
   position: absolute;
@@ -64,7 +69,8 @@ footer{
   height: 120px;
   top: 50%;
   left: 50%;
-  transform: translate(-50px, -50px);
+  margin-right: -50px;
+  margin-left: -50px;
   border: 16px solid #ecf0ef;
   border-top: 16px solid #009688;
   border-radius: 50%;
