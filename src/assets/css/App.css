@@ -32,6 +32,7 @@ body{
   margin-bottom: 200px;
   min-height: 300px;
 }
+
 .card {
   box-shadow: 3px 4px 5px rgba(0,0,0,0.2);
 }
@@ -83,5 +84,14 @@ footer{
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    margin-top: -100px !important;
+  }
+  .app-header h4{
+    padding-top: 2px !important;
   }
 }
